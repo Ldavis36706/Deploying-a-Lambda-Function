@@ -21,28 +21,28 @@ AWS (Amazon Web Services): This project was conducted entirely in AWS, utilizing
 
 <p align="center">
 
-The following diagram depicts the basic architecture of the lab environment. The resources depicted in the diagram already exist in your Amazon Web Services (AWS) account when you start the lab.
+The following diagram depicts the basic architecture of application flow. 
 
  <br/>
  
-![Figure 1](https://github.com/user-attachments/assets/a04afe38-bd83-4a8c-9480-0f03c0caffd5)
+![Figure 1](https://i.imgur.com/u9r445z.png)
 
-<i>Figure 1: The diagram illustrates a website developer working in an AWS Cloud environment using an AWS Cloud9 IDE hosted on an Amazon Elastic Compute Cloud (Amazon EC2) instance. The instance is set up in a security-controlled public subnet of a virtual private cloud (VPC) and is accessible over the internet. The hosted website is available to consumers through the Apache HTTP Server running on the EC2 instance. For more information, refer to the following detailed diagram overview.</i>
+<i>Figure 1: The diagram illustrates a user uploading an object to the source bucket in Amazon S3 (object-created event). Amazon S3 detects the object-created event and publishes the event to AWS Lambda by invoking the Lambda function and passing event data as a function parameter. AWS Lambda runs the Lambda function. From the event data it receives, the Lambda function knows the source bucket name and object key name. The Lambda function reads the object and creates a thumbnail using graphics libraries, then saves the thumbnail to the target bucket..</i>
 <br />
 <br />
 <br />
 
 
-My first step was connecting to AWS Cloud 9 IDE. After connecting to the Cloud 9 environment I verified that the web server was running by using the following command: <b> sudo systemctl status apache2</b>.
+My first step was creating two Amazon Simple Storage Service buckets. The first bucket was my source bucket. This bucket is where the original photo is storage. The second bucket is a target bucket where the original photo will be converted to a thumbnail. One challenge that I faced with creating my Amaoxn S3 three bucket is naming the bucket. The buckets must contain a globally unique name. To overcome this challenge I added some numbers to the original name I selected to achieve cardinality. My goal was to have a very unique name.</b>.
 
-![Verify Apache Server Working](https://github.com/user-attachments/assets/bbe078dc-6376-4ec1-b8ba-84799b14f32f)
+![Verify Apache Server Working](https://i.imgur.com/T0KWtBc.png)
 
 
 
 <br />
 
 I wanted to observe the web server document root directory and contents. To discover the default web server DocumentRoot location, I ran the following command: <b> cat /etc/apache2/sites-available/000-default.conf</b>. In the web server’s configuration file, webpages are served to users from the default directory /var/www/html. To list the contents of the default directory,  you can run the following command: <b> ls /var/www/html</b>.
-![Document Root location](https://github.com/user-attachments/assets/22448fd9-25f4-4fc7-a62f-d047cca98a92)
+![Document Root location](https://i.imgur.com/PXbDBC4.jpeg)
 
 
 
