@@ -33,7 +33,7 @@ The following diagram depicts the basic architecture of application flow.
 <br />
 
 
-My first step was creating two Amazon Simple Storage Service buckets. The first bucket was my source bucket. This bucket is where the original photo is storage. The second bucket is a target bucket where the original photo will be converted to a thumbnail. One challenge that I faced with creating my Amaoxn S3 three bucket is naming the bucket. The buckets must contain a globally unique name. To overcome this challenge I added some numbers to the original name I selected to achieve cardinality. My goal was to have a very unique name.</b>.
+My first step was creating two Amazon Simple Storage Service buckets. The first bucket was my source bucket. This bucket is where the original photo is storage. The second bucket is my target bucket where the original photo will be converted to a thumbnail. One challenge that I faced with creating my Amazon S3 three bucket is naming the bucket. The first name I chose was already in use. The buckets must contain a globally unique name. To overcome this challenge I added some numbers to the original name I selected to achieve cardinality. My goal was to have a very unique name.</b>.
 
 ![Verify Apache Server Working](https://i.imgur.com/T0KWtBc.png)
 
