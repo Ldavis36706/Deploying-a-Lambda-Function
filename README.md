@@ -104,7 +104,7 @@ The function performs several tasks: receiving an event with the image name, dow
 
 
 Next, I set the Handler to CreateThumbnail.handler under Runtime settings and updated the General Configuration by adding a description and keeping default memory and timeout settings.
-To test the function, I created a test event in the Lambda console using the S3 Put template, replacing example-bucket with my source bucket name.
+To test the function, I created a test event in the Lambda console using the S3 Put template, replacing example-bucket with my source bucket name. Running the test successfully processed the HappyFace.jpg image, confirmed by the "Execution succeeded" message.
 
 <br />
 
@@ -114,40 +114,21 @@ To test the function, I created a test event in the Lambda console using the S3 
 
 <br />
 
-I reloaded the webpage after my configuration changes. It was successful this time.
-![Successfully loaded webpage](https://github.com/user-attachments/assets/0947084f-eea7-4eee-939e-ad14f1f82cc2)
+Finally, I verified the output by checking the target S3 bucket (images-255722-resized), where the resized image appeared as expected. I also monitored the Lambda function using the Monitor tab in the console, reviewing metrics like invocations, duration, and errors, along with detailed logs in Amazon CloudWatch..
+
+<br />
+
+![Verified Output](https://i.imgur.com/zJfq2IN.png)
 
 
 <br />
 
-I moved the existing index.html file to a backup location. To do this: Return to the AWS Cloud9 Bash terminal, and run the following command: <b> sudo mv /var/www/html/index.html /var/tmp/</b>.
-I tried to reload the webpage after making these changes, but the page would not load.
-![No files in Root location](https://github.com/user-attachments/assets/92144ab3-8f4b-4fc0-a23a-547ecd74b64a)
+Finally, I uploaded a picture of my Project Pal, Rester McGlown, and me to verify the function's functionality, and it worked as expected.
+
+<br /> 
+
+![Project Pals](https://imgur.com/TYci88I)
 
 <i>Figure 2: This message is displayed because there are currently no files in the DocumentRoot location.</i>
 
-
-<br />
-
-I configured the AWS Cloud9 IDE environment window to show the web server document root. To do so, in the AWS Cloud9 Bash terminal, run the following commands: <b> ln -s /var/www/ /home/ubuntu/environment/www
-sudo chown -R ubuntu /var/www/</b>.  The first command created a symlink to the /var/www directory in your environment directory. The second command changed ownership of the files in the /var/www directory so the ubuntu user (which is you) can edit the files in this www directory. If you want, you can verify the user by running whoami.
-![Configure root directory](https://github.com/user-attachments/assets/a2bd39a4-98ff-488f-807f-0b75c87e2a58)
-
-
-<br />
-
-I began creating a <span zeum4c20="PR_1_0" data-ddnwab="PR_1_0" aria-invalid="grammar" class="Lm ng">webpage</span> for "Anycompany Bicycle parts". I was so proud of myself for getting the header to display that I deviated from the project. Here is a temporary message where I'm asking for a job.
-![Successful webpage](https://github.com/user-attachments/assets/576b59f4-0434-4933-a737-fcd9fbcef71a)
-
-
-Now it's time to get back on track. I added some heading and paragraph elements. I was able to add hyperlinks to jump to different sections in my webpage. Additionally, I was able to open links in a different <span zeum4c20="PR_2_0" data-ddnwab="PR_2_0" aria-invalid="spelling" class="LI ng">browswer</span> from my webpage. I added a target attribute and gave it the value of "_blank." I added an HTML entity as well. I figured out how to include the copyright symbol. It can be achieved by typing: <b><p>&copy; </b>. Below you will see a snippet of my HTML code.
-![HTML code](https://github.com/user-attachments/assets/be5b5706-5f3a-43f1-a119-17471606231e)
-
-
-<br />
-
-Finally I completed my webpage. It turned out better than I expected.
-![Completed Webpage](https://github.com/user-attachments/assets/de1a58fb-1875-431d-a32f-35b14e18a029)
-
-<br/>
 
