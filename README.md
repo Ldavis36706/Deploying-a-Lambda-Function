@@ -87,14 +87,21 @@ I set up an Amazon S3 trigger to automatically invoke the Lambda function whenev
 Once the trigger is successfully added, a "Trigger was successfully added to function" message appears at the top of the page. 
 
 <br />
+<br />
 
 ![Adding S3 Trigger](https://i.imgur.com/DY0b8z3.png)
 
 
 
 <br />
+<br />
 
-I began troubleshooting. I wanted to check for connectivity issues so I started checking for any network issues. I looked at the security group rules. The security group acts as a virtual firewall. When I checked the inbound rules I noticed there was no rule to allow traffic from the internet.
+To enable image processing, I configured the Lambda function by uploading the <strong> CreateThumbnail.zip </strong> deployment package in the Code tab of the Lambda console. Please refer to the <strong> CreateThumbnail.zip </strong> file attached to this repository.
+The function performs several tasks: receiving an event with the image name, downloading the image, resizing it using the Pillow library, and uploading the resized image to the target S3 bucket.
+
+<br />
+<br />
+
 ![Instance Inbound Rules](https://github.com/user-attachments/assets/b47ef338-c2e4-45ba-91b6-75e97eb0e990)
 
 
