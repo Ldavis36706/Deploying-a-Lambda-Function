@@ -53,7 +53,7 @@ The next step is to create the role that will be attached to the Lambda function
 
 <br />
 
-To automate image processing, a Lambda function is configured with an Amazon S3 trigger, enabling it to execute whenever a new object is uploaded to the source S3 bucket. AWS Lambda is a compute service that lets you run code without provisioning or managing servers. The steps to create a Lambda function are listed below.
+To automate image processing, a Lambda function is configured with an Amazon S3 trigger, enabling it to execute whenever a new object is uploaded to the source S3 bucket. AWS Lambda is a compute service that lets you run code without provisioning or managing servers. The steps to create a Lambda function are listed below:
 
 <ol>
   <li><b>Open the AWS Management Console</b></li>
@@ -74,7 +74,7 @@ Once the function is successfully created, a "Successfully created the function"
 
 <br />
 
-I set up an Amazon S3 trigger to automatically invoke the Lambda function whenever an image is uploaded to the source S3 bucket. The Lambda function then processes the image. This kind of automation is essential in cloud computing for efficient workflows. The steps to create an S3 trigger function are listed below.
+I set up an Amazon S3 trigger to automatically invoke the Lambda function whenever an image is uploaded to the source S3 bucket. The Lambda function then processes the image. This kind of automation is essential in cloud computing for efficient workflows. The steps to create an S3 trigger function are listed below:
 
 <ol>
   <li><b>Go to the Create-Thumbnail Lambda function page</b></li>
