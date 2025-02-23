@@ -96,19 +96,19 @@ Once the trigger is successfully added, a "Trigger was successfully added to fun
 <br />
 <br />
 
-To enable image processing, I configured the Lambda function by uploading the <strong> CreateThumbnail.zip </strong> deployment package in the Code tab of the Lambda console. Please refer to the <strong> CreateThumbnail.zip </strong> file attached to this repository.
+To enable image processing, I configured the Lambda function by uploading the <strong> CreateThumbnail.zip.zst </strong> deployment package in the Code tab of the Lambda console. Please refer to the <strong> CreateThumbnail.zip.zst </strong> file attached to this repository.
 The function performs several tasks: receiving an event with the image name, downloading the image, resizing it using the Pillow library, and uploading the resized image to the target S3 bucket.
 
 <br />
 <br />
 
-![Instance Inbound Rules](https://github.com/user-attachments/assets/b47ef338-c2e4-45ba-91b6-75e97eb0e990)
 
+Next, I set the Handler to CreateThumbnail.handler under Runtime settings and updated the General Configuration by adding a description and keeping default memory and timeout settings.
+To test the function, I created a test event in the Lambda console using the S3 Put template, replacing example-bucket with my source bucket name.
 
 <br />
 
-I added an inbound rule to allow all traffic from any IP address.
-![Updated inbound rules](https://github.com/user-attachments/assets/0e8f4572-969a-4639-bbe2-6a8d6c3bc345)
+![Test Lambda](https://i.imgur.com/bDk7z1g.png)
 
 
 
