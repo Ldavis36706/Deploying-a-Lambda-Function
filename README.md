@@ -37,12 +37,17 @@ My first step was creating two Amazon Simple Storage Service buckets. The first 
 
 ![Verify Apache Server Working](https://i.imgur.com/T0KWtBc.png)
 
-
+<br />
 
 <br />
 
-I wanted to observe the web server document root directory and contents. To discover the default web server DocumentRoot location, I ran the following command: <b> cat /etc/apache2/sites-available/000-default.conf</b>. In the web server’s configuration file, webpages are served to users from the default directory /var/www/html. To list the contents of the default directory,  you can run the following command: <b> ls /var/www/html</b>.
-![Document Root location](https://i.imgur.com/PXbDBC4.jpeg)
+<br />
+
+
+
+The next step is to create the role that will be attached to the Lambda function. When creating an IAM role, it's essential to attach the appropriate permissions. I always follow the <b> <i>  principle of least privilege,</b></i> granting only the permissions necessary to perform specific tasks. You can either use AWS-managed policies or create custom policies tailored to your needs.
+
+![IAM Role](https://i.imgur.com/MLazWTL.png)
 
 
 
