@@ -53,16 +53,42 @@ The next step is to create the role that will be attached to the Lambda function
 
 <br />
 
-To retrieve the IPv4 public IP address of the instance AWS Cloud9 is running on, run this command: <b> curl 169.254.169.254/latest/meta-data/public-ipv4</b>. You will use this public IP address to load the webpage.
-![Retrieve IP Address to load webpage](https://github.com/user-attachments/assets/81c30c1b-7eab-4a6d-a354-a4473d678f22)
+To automate image processing, a Lambda function is configured with an Amazon S3 trigger, enabling it to execute whenever a new object is uploaded to the source S3 bucket. AWS Lambda is a compute service that lets you run code without provisioning or managing servers. The steps to create a Lambda function are listed below.
+
+<ol>
+  <li><b>Open the AWS Management Console</b></li>
+  <li><b>Search for Lambda and select it</b></li>
+  <li><b>Click create function</b></li>                 
+ <li><b>Select Author from scratch</b></b></li>
+  <li><b>In the Basic information section, configure the following:</b><br /> Function name: Create-Thumbnail <br /> Runtime: Select Python 3.9 from the available options.<br /> Expand Change default execution role and choose: Execution role: <br />Use an existing role Existing role: lambda-execution-role (Grants permission to read and write images in S3 buckets.</li>
+  <li><b>Click create function</b></li></li>
+</ol>
+<br />
+Once the function is successfully created, a "Successfully created the function" message appears at the top of the page.
+
+<br />
+
+![Lambda Function](https://i.imgur.com/65OVM6k.png)
 
 
 
 <br />
 
-The webpage would not load for me.
- <br/>
-![Unable to load webpage](https://github.com/user-attachments/assets/fc3791eb-6776-4385-bcfb-fe2fc6ef6105)
+I set up an Amazon S3 trigger to automatically invoke the Lambda function whenever an image is uploaded to the source S3 bucket. The Lambda function then processes the image. This kind of automation is essential in cloud computing for efficient workflows. The steps to create an S3 trigger function are listed below.
+
+<ol>
+  <li><b>Go to the Create-Thumbnail Lambda function page</b></li>
+  <li><b>In the Function overview section, click Add trigger</b></li>
+  <li><b>Click create function</b></li>                 
+  <li><b>In the Trigger configuration section, configure the following settings:</b><br /> Source: Select S3 <br />Bucket: Choose the source bucket.<br /> Acknowledge the Recursive invocation warning </li>
+  <li><b>Click Add</b></li></li>
+</ol>
+<br />
+Once the trigger is successfully added, a "Trigger was successfully added to function" message appears at the top of the page. 
+
+<br />
+
+![Adding S3 Trigger](https://i.imgur.com/DY0b8z3.png)
 
 
 
