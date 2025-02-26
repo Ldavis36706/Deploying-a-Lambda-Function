@@ -23,9 +23,9 @@ AWS (Amazon Web Services): This project was conducted entirely in AWS, utilizing
 
 The following diagram depicts the basic architecture of application flow. 
 
- <br/>
+
  
-![Figure 1](https://i.imgur.com/u9r445z.png)
+![Figure 1](https://i.imgur.com/LhBZM8l.png)
 
 <i>Figure 1: The diagram illustrates a user uploading an object to the source bucket in Amazon S3 (object-created event). Amazon S3 detects the object-created event and publishes the event to AWS Lambda by invoking the Lambda function and passing event data as a function parameter. AWS Lambda runs the Lambda function. From the event data it receives, the Lambda function knows the source bucket name and object key name. The Lambda function reads the object and creates a thumbnail using graphics libraries, then saves the thumbnail to the target bucket..</i>
 <br />
@@ -123,14 +123,22 @@ Finally, I verified the output by checking the target S3 bucket (images-255722-r
 
 <br />
 
+I encountered an issue where the function was not completing successfully. According to the CloudWatch logs, the target bucket did not exist. Upon troubleshooting, I discovered that the bucket was incorrectly named. After reviewing the steps, I renamed the bucket to match the required naming scheme, which resolved the issue.
+<strong> Lesson learned:</strong> Adhering strictly to naming schemes is essential to prevent errors.
+
+<br />
+
+![Cloudwatch](https://i.imgur.com/8xSZvzc.png)
+
+<br />
 
 
-Finally, I uploaded a picture of my Project Pal, Rester McGlown, and me to verify the function's functionality, and it worked as expected.
+To mark the successful completion of the project, Rester and I took a commemorative photo together.
 
 <br /> 
 
-![Project Pals](https://imgur.com/TYci88I)
+![Project Pals](https://i.imgur.com/VolVIlv.png)
 
-<i>Figure 2: This message is displayed because there are currently no files in the DocumentRoot location.</i>
+
 
 
