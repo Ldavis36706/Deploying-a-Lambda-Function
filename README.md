@@ -68,6 +68,8 @@ Once the function is successfully created, a "Successfully created the function"
 
 <br />
 
+<br />
+
 ![Lambda Function](https://i.imgur.com/65OVM6k.png)
 
 
@@ -111,6 +113,7 @@ To test the function, I created a test event in the Lambda console using the S3 
 ![Test Lambda](https://i.imgur.com/bDk7z1g.png)
 
 
+<br />
 
 <br />
 
@@ -122,6 +125,9 @@ Finally, I verified the output by checking the target S3 bucket (images-255722-r
 
 
 <br />
+<br />
+
+
 
 I encountered an issue where the function was not completing successfully. According to the CloudWatch logs, the target bucket did not exist. Upon troubleshooting, I discovered that the bucket was incorrectly named. After reviewing the steps, I renamed the bucket to match the required naming scheme, which resolved the issue.
 <strong> Lesson learned:</strong> Adhering strictly to naming schemes is essential to prevent errors.
@@ -131,6 +137,8 @@ I encountered an issue where the function was not completing successfully. Accor
 ![Cloudwatch](https://i.imgur.com/8xSZvzc.png)
 
 <br />
+<br />
+
 
 
 To mark the successful completion of the project, Rester and I took a commemorative photo together.
