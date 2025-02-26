@@ -114,7 +114,7 @@ To test the function, I created a test event in the Lambda console using the S3 
 
 <br />
 
-Finally, I verified the output by checking the target S3 bucket (images-255722-resized), where the resized image appeared as expected. I also monitored the Lambda function using the Monitor tab in the console, reviewing metrics like invocations, duration, and errors, along with detailed logs in Amazon CloudWatch..
+Finally, I verified the output by checking the target S3 bucket (images-255722-resized), where the resized image appeared as expected. I also monitored the Lambda function using the Monitor tab in the console, reviewing metrics like invocations, duration, and errors, along with detailed logs in Amazon CloudWatch.
 
 <br />
 
@@ -122,6 +122,8 @@ Finally, I verified the output by checking the target S3 bucket (images-255722-r
 
 
 <br />
+
+
 
 Finally, I uploaded a picture of my Project Pal, Rester McGlown, and me to verify the function's functionality, and it worked as expected.
 
