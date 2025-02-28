@@ -2,6 +2,7 @@
 I created an AWS Lambda function and configured an event notification for Amazon Simple Storage Service (Amazon S3).
 
 
+
 <h2>Description</h2>
 I created an AWS Lambda function that resizes an uploaded image to create a thumbnail. I configured an event notification in Amazon S3 to trigger the Lambda function whenever an image is uploaded. The function processes the original image, resizes it into a thumbnail, and saves it in a target S3 bucket. Finally, I monitored the Lambda function's performance and logged events using Amazon CloudWatch.<br />
 
